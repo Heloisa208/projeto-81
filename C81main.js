@@ -1,5 +1,4 @@
 canvas=document.getElementById("myCanvas")
-color="red";
 ctx=canvas.getContext("2d");
 
 
@@ -23,10 +22,13 @@ document.body.style.overflow="hidden";
 }
 
 
-canvas.addEventListener("toutchStart",myTouchStart)
+canvas.addEventListener("toutchstart",myTouchStart)
 function myTouchStart(e){
 lastpositionX=e.touches[0].clientX- canvas.offsetLeft;
 lastpositionY=e.touches[0].clientY- canvas.offsetTop;
+ color=document.getElementById("cor").value;
+larg=document.getElementById("largura").value;
+ 
 }
 
 canvas.addEventListener("touchmove",myTouchMove)
